@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "target": "es6",
+        "module": "commonjs",
+        "outDir": "./build",
+        "rootDir": "../server",
+        "typeRoots": [
+            "../node_modules/@types"
+        ],
+        "types": [
+            "node",
+            "mocha"
+        ]
+    },
+    "include":[
+        // arquivos com que o compilador vai trabalhar/visualizar
+        "src/**/*.ts",
+        "src/*.ts",
+        "tests/**/*.ts",
+        "tests/**/**/*.ts",
+        "tests/**/config/**.*"
+    ],
+    "exclude": [
+        "node_modules",
+        "./build"
+    ],
+    "compileOnSave": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+}

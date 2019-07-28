@@ -1,0 +1,14 @@
+{
+    "watch": ["src"],
+    "ext": "ts",
+    "exec": "npm start",
+    "execMap": {
+        "ts": "colocar o babel compile aqui"
+    },
+    "ignore": [
+        "**/*.test.ts",
+        "**/*.spec.ts",
+        ".git",
+        "node_modules"
+    ]
+}
