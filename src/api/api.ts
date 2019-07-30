@@ -4,6 +4,7 @@
 import * as express from 'express';
 import * as morgan from 'morgan';
 import * as bodyParser from 'body-parser';
+import * as cors from 'cors';
 import Routes from './routes/routes';
 import errorHandlerApi from './errorHandlerAPI'; // Importando função padrao , ao cirar mais,coloque enmtre chaves
 import AuthConfig from '../auth';
@@ -20,6 +21,7 @@ class Api {
     }
 
     private middleware(): void {
+        this.express.use(cors());
         this.express.use(morgan('dev'));
         this.express.use(bodyParser.urlencoded({ extended: true }));
         this.express.use(bodyParser.json());
